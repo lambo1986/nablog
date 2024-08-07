@@ -25,6 +25,7 @@ gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
+gem 'bundler', '~> 2.5', '>= 2.5.11'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
@@ -40,7 +41,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
-
+gem "faraday"
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -56,6 +57,9 @@ group :development, :test do
   gem 'orderly'
   gem "faker"
   gem "factory_bot_rails"
+  gem 'webmock'
+  gem 'vcr'
+  gem 'jsonapi-serializer'
 end
 
 group :development do

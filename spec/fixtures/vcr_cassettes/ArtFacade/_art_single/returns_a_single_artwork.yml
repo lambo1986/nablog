@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://collectionapi.metmuseum.org/public/collection/v1/objects/34545
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.10.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Powered-By:
+      - ARR/3.0
+      - ASP.NET
+      Date:
+      - Fri, 09 Aug 2024 21:25:17 GMT
+      Set-Cookie:
+      - incap_ses_517_1662004=BEbvH04DRBHXLqhc6sAsBz6JtmYAAAAAYls8mrF3vPYVPiOPKQK0Dw==;
+        path=/; Domain=.metmuseum.org
+      - visid_incap_1662004=YYTzGOFDStW4QynbzYNaGj6JtmYAAAAAQUIPAAAAAAAnCrtKNzaln92VbZUoB5tP;
+        expires=Sat, 09 Aug 2025 07:36:32 GMT; HttpOnly; path=/; Domain=.metmuseum.org
+      X-Cdn:
+      - Imperva
+      Transfer-Encoding:
+      - chunked
+      X-Iinfo:
+      - 6-6771062-6771066 NNYN CT(42 88 0) RT(1723238717957 77) q(0 0 1 -1) r(2 2)
+        U12
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJvYmplY3RJRCI6MzQ1NDUsImlzSGlnaGxpZ2h0IjpmYWxzZSwiYWNjZXNzaW9uTnVtYmVyIjoiMjkuMTAwLjExMzUiLCJhY2Nlc3Npb25ZZWFyIjoiMTkyOSIsImlzUHVibGljRG9tYWluIjp0cnVlLCJwcmltYXJ5SW1hZ2UiOiJodHRwczovL2ltYWdlcy5tZXRtdXNldW0ub3JnL0NSREltYWdlcy9hYS9vcmlnaW5hbC8yOS4xMDAuMTEzNV8wMDFBQTIwMTUuanBnIiwicHJpbWFyeUltYWdlU21hbGwiOiJodHRwczovL2ltYWdlcy5tZXRtdXNldW0ub3JnL0NSREltYWdlcy9hYS93ZWItbGFyZ2UvMjkuMTAwLjExMzVfMDAxQUEyMDE1LmpwZyIsImFkZGl0aW9uYWxJbWFnZXMiOlsiaHR0cHM6Ly9pbWFnZXMubWV0bXVzZXVtLm9yZy9DUkRJbWFnZXMvYWEvb3JpZ2luYWwvMjkuMTAwLjExMzVfMDAyQUEyMDE1LmpwZyJdLCJjb25zdGl0dWVudHMiOm51bGwsImRlcGFydG1lbnQiOiJBcm1zIGFuZCBBcm1vciIsIm9iamVjdE5hbWUiOiJLbmlmZSBoYW5kbGUgKEtvenVrYSkiLCJ0aXRsZSI6IktuaWZlIEhhbmRsZSAoS296dWthKSIsImN1bHR1cmUiOiJKYXBhbmVzZSIsInBlcmlvZCI6IiIsImR5bmFzdHkiOiIiLCJyZWlnbiI6IiIsInBvcnRmb2xpbyI6IiIsImFydGlzdFJvbGUiOiIiLCJhcnRpc3RQcmVmaXgiOiIiLCJhcnRpc3REaXNwbGF5TmFtZSI6IiIsImFydGlzdERpc3BsYXlCaW8iOiIiLCJhcnRpc3RTdWZmaXgiOiIiLCJhcnRpc3RBbHBoYVNvcnQiOiIiLCJhcnRpc3ROYXRpb25hbGl0eSI6IiIsImFydGlzdEJlZ2luRGF0ZSI6IiIsImFydGlzdEVuZERhdGUiOiIiLCJhcnRpc3RHZW5kZXIiOiIiLCJhcnRpc3RXaWtpZGF0YV9VUkwiOiIiLCJhcnRpc3RVTEFOX1VSTCI6IiIsIm9iamVjdERhdGUiOiJjYS4gMTYxNeKAkzE4NjgiLCJvYmplY3RCZWdpbkRhdGUiOjE1OTAsIm9iamVjdEVuZERhdGUiOjE5MDAsIm1lZGl1bSI6IkNvcHBlci1nb2xkIGFsbG95IChzaGFrdWTFjSksIGdvbGQiLCJkaW1lbnNpb25zIjoiTC4gMyAxMy8xNiBpbi4gKDkuNyBjbSk7IFcuIDkvMTYgaW4uICgxLjQgY20pOyB0aGlja25lc3MgMS80IGluLiAoMC42IGNtKTsgV3QuIDEuMSBvei4gKDMxLjIgZykiLCJtZWFzdXJlbWVudHMiOm51bGwsImNyZWRpdExpbmUiOiJILiBPLiBIYXZlbWV5ZXIgQ29sbGVjdGlvbiwgQmVxdWVzdCBvZiBNcnMuIEguIE8uIEhhdmVtZXllciwgMTkyOSIsImdlb2dyYXBoeVR5cGUiOiJDb3VudHJ5IG9mIE9yaWdpbiIsImNpdHkiOiIiLCJzdGF0ZSI6IiIsImNvdW50eSI6IiIsImNvdW50cnkiOiJKYXBhbiIsInJlZ2lvbiI6IiIsInN1YnJlZ2lvbiI6IiIsImxvY2FsZSI6IiIsImxvY3VzIjoiIiwiZXhjYXZhdGlvbiI6IiIsInJpdmVyIjoiIiwiY2xhc3NpZmljYXRpb24iOiJTd29yZCBGdXJuaXR1cmUtS296dWthIiwicmlnaHRzQW5kUmVwcm9kdWN0aW9uIjoiIiwibGlua1Jlc291cmNlIjoiIiwibWV0YWRhdGFEYXRlIjoiMjAyMi0wMi0wOFQwNDozOToyMC40NVoiLCJyZXBvc2l0b3J5IjoiTWV0cm9wb2xpdGFuIE11c2V1bSBvZiBBcnQsIE5ldyBZb3JrLCBOWSIsIm9iamVjdFVSTCI6Imh0dHBzOi8vd3d3Lm1ldG11c2V1bS5vcmcvYXJ0L2NvbGxlY3Rpb24vc2VhcmNoLzM0NTQ1IiwidGFncyI6W3sidGVybSI6IkJvYXRzIiwiQUFUX1VSTCI6Imh0dHA6Ly92b2NhYi5nZXR0eS5lZHUvcGFnZS9hYXQvMzAwMTc4NzQ5IiwiV2lraWRhdGFfVVJMIjoiaHR0cHM6Ly93d3cud2lraWRhdGEub3JnL3dpa2kvUTM1ODcyIn1dLCJvYmplY3RXaWtpZGF0YV9VUkwiOiIiLCJpc1RpbWVsaW5lV29yayI6ZmFsc2UsIkdhbGxlcnlOdW1iZXIiOiIifQ==
+  recorded_at: Fri, 09 Aug 2024 21:25:18 GMT
+recorded_with: VCR 6.2.0

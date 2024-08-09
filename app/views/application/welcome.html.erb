@@ -27,3 +27,10 @@
   </div>
 <% end %>
 
+<hr> 
+
+<% cache @weird_art do %>
+  <%= image_tag @weird_art.image_url %>
+<% end %>
+
+

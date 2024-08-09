@@ -3,8 +3,7 @@ class SubscriptionsController < ApplicationController
     subscriber = Subscriber.new(subscriber_params)
 
     if subscriber.save
-      # Send the welcome email
-      SubscriberMailer.welcome_email(subscriber).deliver_later
+      SubscriberMailer.welcome_email(subscriber).deliver_now
 
       redirect_to root_path, notice: 'Thank you for subscribing!'
     else

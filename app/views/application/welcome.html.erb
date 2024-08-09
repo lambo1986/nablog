@@ -8,3 +8,22 @@
   <li><a href="/junkyards">Junkyard</a></li>
   <li><a href="/thoughts">Thoughts</a></li>
 </ol>
+
+<h3>Subscribe to Emails:</h3>
+
+<%= form_with(model: Subscriber.new, url: subscribe_path, method: :post, local: true) do |form| %>
+  <div>
+    <%= form.label :name, "Your Name" %>
+    <%= form.text_field :name, required: true %>
+  </div>
+
+  <div>
+    <%= form.label :email, "Your Email Address" %>
+    <%= form.email_field :email, required: true %>
+  </div>
+
+  <div>
+    <%= form.submit "Subscribe" %>
+  </div>
+<% end %>
+

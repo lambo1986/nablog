@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get :about, to: "application#about"
   get :contact, to: "application#contact"
 
+  post 'subscribe', to: 'subscriptions#create', as: 'subscribe'
+  
   resources :junkyards, only: [:index]
   resources :thoughts, only: [:index]
 end

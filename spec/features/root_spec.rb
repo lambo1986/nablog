@@ -32,4 +32,12 @@ RSpec.describe "Root Page", type: :feature do
 
     expect(page).to have_link("Thoughts")
   end
+
+  describe "email subscription form", type: :feature do
+    it "displays the form for a visitor to enter info for email updates" do
+      visit root_path
+
+      expect(page).to have_content("Subscribe to Emails")
+    end
+  end
 end

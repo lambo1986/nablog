@@ -38,3 +38,5 @@ source ~/.zshrc
 ruby -v
 rails -v
 ```
+
+### You may also need to install Node and rbenv or something similar.

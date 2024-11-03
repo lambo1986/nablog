@@ -39,4 +39,4 @@ ruby -v
 rails -v
 ```
 
-### You may also need to install Node and rbenv or something similar.
+### You may also need to install Node and rbenv or something similar. Also, make sure you have installed postgresql on your machine and migrated those databases before you can run tests. You will need to bundle install the gems as well. 

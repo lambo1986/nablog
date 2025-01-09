@@ -80,3 +80,7 @@ VCR.configure do |config|
   config.default_cassette_options = { match_requests_on: [:method, :uri] }
   config.allow_http_connections_when_no_cassette = true
 end
+
+RSpec.configure do |config|
+  config.include FactoryBot::Syntax::Methods
+end

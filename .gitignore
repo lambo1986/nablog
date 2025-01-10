@@ -36,3 +36,6 @@
 
 #ignore simplecov
 /coverage
+
+#add the chrome browser added for simplecov
+google-chrome-stable_current_amd64.deb

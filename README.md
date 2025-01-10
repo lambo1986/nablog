@@ -40,3 +40,8 @@ rails -v
 ```
 
 ### You may also need to install Node and rbenv or something similar. Also, make sure you have installed postgresql on your machine and migrated those databases before you can run tests. You will need to bundle install the gems as well. 
+
+### I like to use Google Chrome to check test coverage, which can be downloaded like this, if necessary:
+```
+sudo apt install google-chrome-stable
+```

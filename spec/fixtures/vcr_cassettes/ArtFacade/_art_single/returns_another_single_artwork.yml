@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://collectionapi.metmuseum.org/public/collection/v1/objects/47895
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.10.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Powered-By:
+      - ARR/3.0
+      - ASP.NET
+      Date:
+      - Sun, 12 Jan 2025 14:00:14 GMT
+      Set-Cookie:
+      - incap_ses_1815_1662004=TTo/Qt8eNzH08kosHy0wGe7Kg2cAAAAAkDqlf4Caxk8H39GPah7yVw==;
+        path=/; Domain=.metmuseum.org
+      - visid_incap_1662004=qiOH4ZmxQbCP482Vc45+/O7Kg2cAAAAAQUIPAAAAAADh+/KDzwLz6vtFS7x6gY1P;
+        expires=Mon, 12 Jan 2026 07:10:20 GMT; HttpOnly; path=/; Domain=.metmuseum.org
+      X-Cdn:
+      - Imperva
+      Transfer-Encoding:
+      - chunked
+      X-Iinfo:
+      - 49-133900874-133900877 NNYY CT(22 23 0) RT(1736690414420 17) q(0 0 0 -1) r(0
+        0) U12
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJvYmplY3RJRCI6NDc4OTUsImlzSGlnaGxpZ2h0IjpmYWxzZSwiYWNjZXNzaW9uTnVtYmVyIjoiMjkuMTQ5LjY2IiwiYWNjZXNzaW9uWWVhciI6IjE5MjkiLCJpc1B1YmxpY0RvbWFpbiI6dHJ1ZSwicHJpbWFyeUltYWdlIjoiaHR0cHM6Ly9pbWFnZXMubWV0bXVzZXVtLm9yZy9DUkRJbWFnZXMvYXMvb3JpZ2luYWwvMjlfMTQ5XzY2X08xX3NmLmpwZyIsInByaW1hcnlJbWFnZVNtYWxsIjoiaHR0cHM6Ly9pbWFnZXMubWV0bXVzZXVtLm9yZy9DUkRJbWFnZXMvYXMvd2ViLWxhcmdlLzI5XzE0OV82Nl9PMV9zZi5qcGciLCJhZGRpdGlvbmFsSW1hZ2VzIjpbImh0dHBzOi8vaW1hZ2VzLm1ldG11c2V1bS5vcmcvQ1JESW1hZ2VzL2FzL29yaWdpbmFsLzI5XzE0OV82Nl9PMl9zZi5qcGciLCJodHRwczovL2ltYWdlcy5tZXRtdXNldW0ub3JnL0NSREltYWdlcy9hcy9vcmlnaW5hbC8yOV8xNDlfNjZfTzNfc2YuanBnIiwiaHR0cHM6Ly9pbWFnZXMubWV0bXVzZXVtLm9yZy9DUkRJbWFnZXMvYXMvb3JpZ2luYWwvMjlfMTQ5XzY2X080X3NmLmpwZyIsImh0dHBzOi8vaW1hZ2VzLm1ldG11c2V1bS5vcmcvQ1JESW1hZ2VzL2FzL29yaWdpbmFsLzI5XzE0OV82Nl9CbV9zZi5qcGciXSwiY29uc3RpdHVlbnRzIjpudWxsLCJkZXBhcnRtZW50IjoiQXNpYW4gQXJ0Iiwib2JqZWN0TmFtZSI6IkN1cCIsInRpdGxlIjoiQmlyZCBDdXAiLCJjdWx0dXJlIjoiQ2hpbmEiLCJwZXJpb2QiOiJRaW5nIGR5bmFzdHkgKDE2NDTigJMxOTExKSwgUWlhbmxvbmcgcGVyaW9kICgxNzM24oCTOTUpIiwiZHluYXN0eSI6IiIsInJlaWduIjoiIiwicG9ydGZvbGlvIjoiIiwiYXJ0aXN0Um9sZSI6IiIsImFydGlzdFByZWZpeCI6IiIsImFydGlzdERpc3BsYXlOYW1lIjoiIiwiYXJ0aXN0RGlzcGxheUJpbyI6IiIsImFydGlzdFN1ZmZpeCI6IiIsImFydGlzdEFscGhhU29ydCI6IiIsImFydGlzdE5hdGlvbmFsaXR5IjoiIiwiYXJ0aXN0QmVnaW5EYXRlIjoiIiwiYXJ0aXN0RW5kRGF0ZSI6IiIsImFydGlzdEdlbmRlciI6IiIsImFydGlzdFdpa2lkYXRhX1VSTCI6IiIsImFydGlzdFVMQU5fVVJMIjoiIiwib2JqZWN0RGF0ZSI6IiIsIm9iamVjdEJlZ2luRGF0ZSI6MTczNiwib2JqZWN0RW5kRGF0ZSI6MTc5NSwibWVkaXVtIjoiUG9yY2VsYWluIGRlY29yYXRlZCBpbiB1bmRlcmdsYXplIGJsdWUiLCJkaW1lbnNpb25zIjoiKEguIHdpdGggY292ZXI6IDIgMS80IGluLiAoNS43IGNtKTsgJ0RpYW0uIDMgMS80IGluLiAoOC4zIGNtKSIsIm1lYXN1cmVtZW50cyI6W3siZWxlbWVudE5hbWUiOiJPdmVyYWxsIiwiZWxlbWVudERlc2NyaXB0aW9uIjpudWxsLCJlbGVtZW50TWVhc3VyZW1lbnRzIjp7IkhlaWdodCI6NS43LCJXaWR0aCI6OC4zfX1dLCJjcmVkaXRMaW5lIjoiQmVxdWVzdCBvZiBXaWxsaWFtIFJoaW5lbGFuZGVyIFN0ZXdhcnQsIDE5MjkiLCJnZW9ncmFwaHlUeXBlIjoiIiwiY2l0eSI6IiIsInN0YXRlIjoiIiwiY291bnR5IjoiIiwiY291bnRyeSI6IiIsInJlZ2lvbiI6IiIsInN1YnJlZ2lvbiI6IiIsImxvY2FsZSI6IiIsImxvY3VzIjoiIiwiZXhjYXZhdGlvbiI6IiIsInJpdmVyIjoiIiwiY2xhc3NpZmljYXRpb24iOiJDZXJhbWljcyIsInJpZ2h0c0FuZFJlcHJvZHVjdGlvbiI6IiIsImxpbmtSZXNvdXJjZSI6IiIsIm1ldGFkYXRhRGF0ZSI6IjIwMjQtMDItMjFUMDQ6NTc6NDUuMTU3WiIsInJlcG9zaXRvcnkiOiJNZXRyb3BvbGl0YW4gTXVzZXVtIG9mIEFydCwgTmV3IFlvcmssIE5ZIiwib2JqZWN0VVJMIjoiaHR0cHM6Ly93d3cubWV0bXVzZXVtLm9yZy9hcnQvY29sbGVjdGlvbi9zZWFyY2gvNDc4OTUiLCJ0YWdzIjpbeyJ0ZXJtIjoiSGlsbHMiLCJBQVRfVVJMIjoiaHR0cDovL3ZvY2FiLmdldHR5LmVkdS9wYWdlL2FhdC8zMDAwMDg3NzciLCJXaWtpZGF0YV9VUkwiOiJodHRwczovL3d3dy53aWtpZGF0YS5vcmcvd2lraS9RNTQwNTAifSx7InRlcm0iOiJUcmVlcyIsIkFBVF9VUkwiOiJodHRwOi8vdm9jYWIuZ2V0dHkuZWR1L3BhZ2UvYWF0LzMwMDEzMjQxMCIsIldpa2lkYXRhX1VSTCI6Imh0dHBzOi8vd3d3Lndpa2lkYXRhLm9yZy93aWtpL1ExMDg4NCJ9XSwib2JqZWN0V2lraWRhdGFfVVJMIjoiIiwiaXNUaW1lbGluZVdvcmsiOmZhbHNlLCJHYWxsZXJ5TnVtYmVyIjoiIn0=
+  recorded_at: Sun, 12 Jan 2025 14:00:15 GMT
+recorded_with: VCR 6.2.0

@@ -73,3 +73,7 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
+
+gem "pry-rails", "~> 0.3.11", :groups => [:development, :test]
+
+gem "pry-byebug", "~> 3.11", :groups => [:development, :test]

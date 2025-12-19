@@ -1,0 +1,530 @@
+[1mdiff --git a/Gemfile b/Gemfile[m
+[1mindex d4812f3..7cc5c11 100644[m
+[1m--- a/Gemfile[m
+[1m+++ b/Gemfile[m
+[36m@@ -73,3 +73,7 @@[m [mgroup :development do[m
+   # Speed up commands on slow machines / big apps [https://github.com/rails/spring][m
+   # gem "spring"[m
+ end[m
+[32m+[m
+[32m+[m[32mgem "pry-rails", "~> 0.3.11", :groups => [:development, :test][m
+[32m+[m
+[32m+[m[32mgem "pry-byebug", "~> 3.11", :groups => [:development, :test][m
+[1mdiff --git a/Gemfile.lock b/Gemfile.lock[m
+[1mindex e27f132..93104a0 100644[m
+[1m--- a/Gemfile.lock[m
+[1m+++ b/Gemfile.lock[m
+[36m@@ -1,35 +1,36 @@[m
+ GEM[m
+   remote: https://rubygems.org/[m
+   specs:[m
+[31m-    actioncable (7.1.3.4)[m
+[31m-      actionpack (= 7.1.3.4)[m
+[31m-      activesupport (= 7.1.3.4)[m
+[32m+[m[32m    actioncable (7.1.6)[m
+[32m+[m[32m      actionpack (= 7.1.6)[m
+[32m+[m[32m      activesupport (= 7.1.6)[m
+       nio4r (~> 2.0)[m
+       websocket-driver (>= 0.6.1)[m
+       zeitwerk (~> 2.6)[m
+[31m-    actionmailbox (7.1.3.4)[m
+[31m-      actionpack (= 7.1.3.4)[m
+[31m-      activejob (= 7.1.3.4)[m
+[31m-      activerecord (= 7.1.3.4)[m
+[31m-      activestorage (= 7.1.3.4)[m
+[31m-      activesupport (= 7.1.3.4)[m
+[32m+[m[32m    actionmailbox (7.1.6)[m
+[32m+[m[32m      actionpack (= 7.1.6)[m
+[32m+[m[32m      activejob (= 7.1.6)[m
+[32m+[m[32m      activerecord (= 7.1.6)[m
+[32m+[m[32m      activestorage (= 7.1.6)[m
+[32m+[m[32m      activesupport (= 7.1.6)[m
+       mail (>= 2.7.1)[m
+       net-imap[m
+       net-pop[m
+       net-smtp[m
+[31m-    actionmailer (7.1.3.4)[m
+[31m-      actionpack (= 7.1.3.4)[m
+[31m-      actionview (= 7.1.3.4)[m
+[31m-      activejob (= 7.1.3.4)[m
+[31m-      activesupport (= 7.1.3.4)[m
+[32m+[m[32m    actionmailer (7.1.6)[m
+[32m+[m[32m      actionpack (= 7.1.6)[m
+[32m+[m[32m      actionview (= 7.1.6)[m
+[32m+[m[32m      activejob (= 7.1.6)[m
+[32m+[m[32m      activesupport (= 7.1.6)[m
+       mail (~> 2.5, >= 2.5.4)[m
+       net-imap[m
+       net-pop[m
+       net-smtp[m
+       rails-dom-testing (~> 2.2)[m
+[31m-    actionpack (7.1.3.4)[m
+[31m-      actionview (= 7.1.3.4)[m
+[31m-      activesupport (= 7.1.3.4)[m
+[32m+[m[32m    actionpack (7.1.6)[m
+[32m+[m[32m      actionview (= 7.1.6)[m
+[32m+[m[32m      activesupport (= 7.1.6)[m
+[32m+[m[32m      cgi[m
+       nokogiri (>= 1.8.5)[m
+       racc[m
+       rack (>= 2.2.4)[m
+[36m@@ -37,52 +38,58 @@[m [mGEM[m
+       rack-test (>= 0.6.3)[m
+       rails-dom-testing (~> 2.2)[m
+       rails-html-sanitizer (~> 1.6)[m
+[31m-    actiontext (7.1.3.4)[m
+[31m-      actionpack (= 7.1.3.4)[m
+[31m-      activerecord (= 7.1.3.4)[m
+[31m-      activestorage (= 7.1.3.4)[m
+[31m-      activesupport (= 7.1.3.4)[m
+[32m+[m[32m    actiontext (7.1.6)[m
+[32m+[m[32m      actionpack (= 7.1.6)[m
+[32m+[m[32m      activerecord (= 7.1.6)[m
+[32m+[m[32m      activestorage (= 7.1.6)[m
+[32m+[m[32m      activesupport (= 7.1.6)[m
+       globalid (>= 0.6.0)[m
+       nokogiri (>= 1.8.5)[m
+[31m-    actionview (7.1.3.4)[m
+[31m-      activesupport (= 7.1.3.4)[m
+[32m+[m[32m    actionview (7.1.6)[m
+[32m+[m[32m      activesupport (= 7.1.6)[m
+       builder (~> 3.1)[m
+[32m+[m[32m      cgi[m
+       erubi (~> 1.11)[m
+       rails-dom-testing (~> 2.2)[m
+       rails-html-sanitizer (~> 1.6)[m
+[31m-    activejob (7.1.3.4)[m
+[31m-      activesupport (= 7.1.3.4)[m
+[32m+[m[32m    activejob (7.1.6)[m
+[32m+[m[32m      activesupport (= 7.1.6)[m
+       globalid (>= 0.3.6)[m
+[31m-    activemodel (7.1.3.4)[m
+[31m-      activesupport (= 7.1.3.4)[m
+[31m-    activerecord (7.1.3.4)[m
+[31m-      activemodel (= 7.1.3.4)[m
+[31m-      activesupport (= 7.1.3.4)[m
+[32m+[m[32m    activemodel (7.1.6)[m
+[32m+[m[32m      activesupport (= 7.1.6)[m
+[32m+[m[32m    activerecord (7.1.6)[m
+[32m+[m[32m      activemodel (= 7.1.6)[m
+[32m+[m[32m      activesupport (= 7.1.6)[m
+       timeout (>= 0.4.0)[m
+[31m-    activestorage (7.1.3.4)[m
+[31m-      actionpack (= 7.1.3.4)[m
+[31m-      activejob (= 7.1.3.4)[m
+[31m-      activerecord (= 7.1.3.4)[m
+[31m-      activesupport (= 7.1.3.4)[m
+[32m+[m[32m    activestorage (7.1.6)[m
+[32m+[m[32m      actionpack (= 7.1.6)[m
+[32m+[m[32m      activejob (= 7.1.6)[m
+[32m+[m[32m      activerecord (= 7.1.6)[m
+[32m+[m[32m      activesupport (= 7.1.6)[m
+       marcel (~> 1.0)[m
+[31m-    activesupport (7.1.3.4)[m
+[32m+[m[32m    activesupport (7.1.6)[m
+       base64[m
+[32m+[m[32m      benchmark (>= 0.3)[m
+       bigdecimal[m
+       concurrent-ruby (~> 1.0, >= 1.0.2)[m
+       connection_pool (>= 2.2.5)[m
+       drb[m
+       i18n (>= 1.6, < 2)[m
+[32m+[m[32m      logger (>= 1.4.2)[m
+       minitest (>= 5.1)[m
+       mutex_m[m
+[32m+[m[32m      securerandom (>= 0.3)[m
+       tzinfo (~> 2.0)[m
+[31m-    addressable (2.8.7)[m
+[31m-      public_suffix (>= 2.0.2, < 7.0)[m
+[31m-    base64 (0.2.0)[m
+[31m-    bigdecimal (3.1.8)[m
+[32m+[m[32m    addressable (2.8.8)[m
+[32m+[m[32m      public_suffix (>= 2.0.2, < 8.0)[m
+[32m+[m[32m    base64 (0.3.0)[m
+[32m+[m[32m    benchmark (0.5.0)[m
+[32m+[m[32m    bigdecimal (4.0.1)[m
+     bindex (0.8.1)[m
+[31m-    bootsnap (1.18.4)[m
+[32m+[m[32m    bootsnap (1.19.0)[m
+       msgpack (~> 1.2)[m
+     builder (3.3.0)[m
+[32m+[m[32m    byebug (12.0.0)[m
+     capybara (3.40.0)[m
+       addressable[m
+       matrix[m
+[36m@@ -92,224 +99,253 @@[m [mGEM[m
+       rack-test (>= 0.6.3)[m
+       regexp_parser (>= 1.5, < 3.0)[m
+       xpath (~> 3.2)[m
+[32m+[m[32m    cgi (0.5.1)[m
+     childprocess (5.1.0)[m
+       logger (~> 1.5)[m
+     coderay (1.1.3)[m
+[31m-    concurrent-ruby (1.3.3)[m
+[31m-    connection_pool (2.4.1)[m
+[31m-    crack (1.0.0)[m
+[32m+[m[32m    concurrent-ruby (1.3.6)[m
+[32m+[m[32m    connection_pool (3.0.2)[m
+[32m+[m[32m    crack (1.0.1)[m
+       bigdecimal[m
+       rexml[m
+     crass (1.0.6)[m
+[31m-    date (3.3.4)[m
+[31m-    debug (1.9.2)[m
+[32m+[m[32m    date (3.5.1)[m
+[32m+[m[32m    debug (1.11.0)[m
+       irb (~> 1.10)[m
+       reline (>= 0.3.8)[m
+[31m-    diff-lcs (1.5.1)[m
+[32m+[m[32m    diff-lcs (1.6.2)[m
+     docile (1.4.1)[m
+[31m-    dotenv (3.1.2)[m
+[31m-    dotenv-rails (3.1.2)[m
+[31m-      dotenv (= 3.1.2)[m
+[32m+[m[32m    dotenv (3.2.0)[m
+[32m+[m[32m    dotenv-rails (3.2.0)[m
+[32m+[m[32m      dotenv (= 3.2.0)[m
+       railties (>= 6.1)[m
+[31m-    drb (2.2.1)[m
+[31m-    erubi (1.13.0)[m
+[31m-    factory_bot (6.4.6)[m
+[31m-      activesupport (>= 5.0.0)[m
+[31m-    factory_bot_rails (6.4.3)[m
+[31m-      factory_bot (~> 6.4)[m
+[31m-      railties (>= 5.0.0)[m
+[31m-    faker (3.4.2)[m
+[32m+[m[32m    drb (2.2.3)[m
+[32m+[m[32m    erb (6.0.1)[m
+[32m+[m[32m    erubi (1.13.1)[m
+[32m+[m[32m    factory_bot (6.5.6)[m
+[32m+[m[32m      activesupport (>= 6.1.0)[m
+[32m+[m[32m    factory_bot_rails (6.5.1)[m
+[32m+[m[32m      factory_bot (~> 6.5)[m
+[32m+[m[32m      railties (>= 6.1.0)[m
+[32m+[m[32m    faker (3.5.3)[m
+       i18n (>= 1.8.11, < 2)[m
+[31m-    faraday (2.10.1)[m
+[31m-      faraday-net_http (>= 2.0, < 3.2)[m
+[32m+[m[32m    faraday (2.14.0)[m
+[32m+[m[32m      faraday-net_http (>= 2.0, < 3.5)[m
+[32m+[m[32m      json[m
+       logger[m
+[31m-    faraday-net_http (3.1.1)[m
+[31m-      net-http[m
+[31m-    globalid (1.2.1)[m
+[32m+[m[32m    faraday-net_http (3.4.2)[m
+[32m+[m[32m      net-http (~> 0.5)[m
+[32m+[m[32m    globalid (1.3.0)[m
+       activesupport (>= 6.1)[m
+[31m-    hashdiff (1.1.1)[m
+[31m-    i18n (1.14.5)[m
+[32m+[m[32m    hashdiff (1.2.1)[m
+[32m+[m[32m    i18n (1.14.7)[m
+       concurrent-ruby (~> 1.0)[m
+[31m-    importmap-rails (2.0.1)[m
+[32m+[m[32m    importmap-rails (2.2.2)[m
+       actionpack (>= 6.0.0)[m
+       activesupport (>= 6.0.0)[m
+       railties (>= 6.0.0)[m
+[31m-    io-console (0.7.2)[m
+[31m-    irb (1.14.0)[m
+[32m+[m[32m    io-console (0.8.2)[m
+[32m+[m[32m    irb (1.16.0)[m
+[32m+[m[32m      pp (>= 0.6.0)[m
+       rdoc (>= 4.0.0)[m
+       reline (>= 0.4.2)[m
+[31m-    jbuilder (2.12.0)[m
+[31m-      actionview (>= 5.0.0)[m
+[31m-      activesupport (>= 5.0.0)[m
+[32m+[m[32m    jbuilder (2.14.1)[m
+[32m+[m[32m      actionview (>= 7.0.0)[m
+[32m+[m[32m      activesupport (>= 7.0.0)[m
+[32m+[m[32m    json (2.18.0)[m
+     jsonapi-serializer (2.2.0)[m
+       activesupport (>= 4.2)[m
+[31m-    launchy (3.0.1)[m
+[32m+[m[32m    launchy (3.1.1)[m
+       addressable (~> 2.8)[m
+       childprocess (~> 5.0)[m
+[31m-    logger (1.6.0)[m
+[31m-    loofah (2.22.0)[m
+[32m+[m[32m      logger (~> 1.6)[m
+[32m+[m[32m    logger (1.7.0)[m
+[32m+[m[32m    loofah (2.25.0)[m
+       crass (~> 1.0.2)[m
+       nokogiri (>= 1.12.0)[m
+[31m-    mail (2.8.1)[m
+[32m+[m[32m    mail (2.9.0)[m
+[32m+[m[32m      logger[m
+       mini_mime (>= 0.1.1)[m
+       net-imap[m
+       net-pop[m
+       net-smtp[m
+[31m-    marcel (1.0.4)[m
+[31m-    matrix (0.4.2)[m
+[32m+[m[32m    marcel (1.1.0)[m
+[32m+[m[32m    matrix (0.4.3)[m
+     method_source (1.1.0)[m
+     mini_mime (1.1.5)[m
+[31m-    minitest (5.24.1)[m
+[31m-    msgpack (1.7.2)[m
+[31m-    mutex_m (0.2.0)[m
+[31m-    net-http (0.4.1)[m
+[31m-      uri[m
+[31m-    net-imap (0.4.14)[m
+[32m+[m[32m    mini_portile2 (2.8.9)[m
+[32m+[m[32m    minitest (6.0.0)[m
+[32m+[m[32m      prism (~> 1.5)[m
+[32m+[m[32m    msgpack (1.8.0)[m
+[32m+[m[32m    mutex_m (0.3.0)[m
+[32m+[m[32m    net-http (0.9.1)[m
+[32m+[m[32m      uri (>= 0.11.1)[m
+[32m+[m[32m    net-imap (0.6.2)[m
+       date[m
+       net-protocol[m
+     net-pop (0.1.2)[m
+       net-protocol[m
+     net-protocol (0.2.2)[m
+       timeout[m
+[31m-    net-smtp (0.5.0)[m
+[32m+[m[32m    net-smtp (0.5.1)[m
+       net-protocol[m
+[31m-    nio4r (2.7.3)[m
+[31m-    nokogiri (1.16.7-aarch64-linux)[m
+[32m+[m[32m    nio4r (2.7.5)[m
+[32m+[m[32m    nokogiri (1.18.10)[m
+[32m+[m[32m      mini_portile2 (~> 2.8.2)[m
+       racc (~> 1.4)[m
+[31m-    nokogiri (1.16.7-arm-linux)[m
+[32m+[m[32m    nokogiri (1.18.10-aarch64-linux-gnu)[m
+       racc (~> 1.4)[m
+[31m-    nokogiri (1.16.7-arm64-darwin)[m
+[32m+[m[32m    nokogiri (1.18.10-arm-linux-gnu)[m
+       racc (~> 1.4)[m
+[31m-    nokogiri (1.16.7-x86-linux)[m
+[32m+[m[32m    nokogiri (1.18.10-arm64-darwin)[m
+       racc (~> 1.4)[m
+[31m-    nokogiri (1.16.7-x86_64-darwin)[m
+[32m+[m[32m    nokogiri (1.18.10-x86_64-darwin)[m
+       racc (~> 1.4)[m
+[31m-    nokogiri (1.16.7-x86_64-linux)[m
+[32m+[m[32m    nokogiri (1.18.10-x86_64-linux-gnu)[m
+       racc (~> 1.4)[m
+     orderly (0.1.1)[m
+       capybara (>= 1.1)[m
+       rspec (>= 2.14)[m
+[31m-    pg (1.5.7)[m
+[31m-    pry (0.14.2)[m
+[32m+[m[32m    pg (1.6.2)[m
+[32m+[m[32m    pg (1.6.2-aarch64-linux)[m
+[32m+[m[32m    pg (1.6.2-arm64-darwin)[m
+[32m+[m[32m    pg (1.6.2-x86_64-darwin)[m
+[32m+[m[32m    pg (1.6.2-x86_64-linux)[m
+[32m+[m[32m    pp (0.6.3)[m
+[32m+[m[32m      prettyprint[m
+[32m+[m[32m    prettyprint (0.2.0)[m
+[32m+[m[32m    prism (1.7.0)[m
+[32m+[m[32m    pry (0.15.2)[m
+       coderay (~> 1.1)[m
+       method_source (~> 1.0)[m
+[31m-    psych (5.1.2)[m
+[32m+[m[32m    pry-byebug (3.11.0)[m
+[32m+[m[32m      byebug (~> 12.0)[m
+[32m+[m[32m      pry (>= 0.13, < 0.16)[m
+[32m+[m[32m    pry-rails (0.3.11)[m
+[32m+[m[32m      pry (>= 0.13.0)[m
+[32m+[m[32m    psych (5.3.1)[m
+[32m+[m[32m      date[m
+       stringio[m
+[31m-    public_suffix (6.0.1)[m
+[31m-    puma (6.4.2)[m
+[32m+[m[32m    public_suffix (7.0.0)[m
+[32m+[m[32m    puma (7.1.0)[m
+       nio4r (~> 2.0)[m
+     racc (1.8.1)[m
+[31m-    rack (3.1.7)[m
+[31m-    rack-session (2.0.0)[m
+[32m+[m[32m    rack (3.2.4)[m
+[32m+[m[32m    rack-session (2.1.1)[m
+[32m+[m[32m      base64 (>= 0.1.0)[m
+       rack (>= 3.0.0)[m
+[31m-    rack-test (2.1.0)[m
+[32m+[m[32m    rack-test (2.2.0)[m
+       rack (>= 1.3)[m
+[31m-    rackup (2.1.0)[m
+[32m+[m[32m    rackup (2.3.1)[m
+       rack (>= 3)[m
+[31m-      webrick (~> 1.8)[m
+[31m-    rails (7.1.3.4)[m
+[31m-      actioncable (= 7.1.3.4)[m
+[31m-      actionmailbox (= 7.1.3.4)[m
+[31m-      actionmailer (= 7.1.3.4)[m
+[31m-      actionpack (= 7.1.3.4)[m
+[31m-      actiontext (= 7.1.3.4)[m
+[31m-      actionview (= 7.1.3.4)[m
+[31m-      activejob (= 7.1.3.4)[m
+[31m-      activemodel (= 7.1.3.4)[m
+[31m-      activerecord (= 7.1.3.4)[m
+[31m-      activestorage (= 7.1.3.4)[m
+[31m-      activesupport (= 7.1.3.4)[m
+[32m+[m[32m    rails (7.1.6)[m
+[32m+[m[32m      actioncable (= 7.1.6)[m
+[32m+[m[32m      actionmailbox (= 7.1.6)[m
+[32m+[m[32m      actionmailer (= 7.1.6)[m
+[32m+[m[32m      actionpack (= 7.1.6)[m
+[32m+[m[32m      actiontext (= 7.1.6)[m
+[32m+[m[32m      actionview (= 7.1.6)[m
+[32m+[m[32m      activejob (= 7.1.6)[m
+[32m+[m[32m      activemodel (= 7.1.6)[m
+[32m+[m[32m      activerecord (= 7.1.6)[m
+[32m+[m[32m      activestorage (= 7.1.6)[m
+[32m+[m[32m      activesupport (= 7.1.6)[m
+       bundler (>= 1.15.0)[m
+[31m-      railties (= 7.1.3.4)[m
+[31m-    rails-dom-testing (2.2.0)[m
+[32m+[m[32m      railties (= 7.1.6)[m
+[32m+[m[32m    rails-dom-testing (2.3.0)[m
+       activesupport (>= 5.0.0)[m
+       minitest[m
+       nokogiri (>= 1.6)[m
+[31m-    rails-html-sanitizer (1.6.0)[m
+[32m+[m[32m    rails-html-sanitizer (1.6.2)[m
+       loofah (~> 2.21)[m
+[31m-      nokogiri (~> 1.14)[m
+[31m-    railties (7.1.3.4)[m
+[31m-      actionpack (= 7.1.3.4)[m
+[31m-      activesupport (= 7.1.3.4)[m
+[32m+[m[32m      nokogiri (>= 1.15.7, != 1.16.7, != 1.16.6, != 1.16.5, != 1.16.4, != 1.16.3, != 1.16.2, != 1.16.1, != 1.16.0.rc1, != 1.16.0)[m
+[32m+[m[32m    railties (7.1.6)[m
+[32m+[m[32m      actionpack (= 7.1.6)[m
+[32m+[m[32m      activesupport (= 7.1.6)[m
+[32m+[m[32m      cgi[m
+       irb[m
+       rackup (>= 1.0.0)[m
+       rake (>= 12.2)[m
+       thor (~> 1.0, >= 1.2.2)[m
+[32m+[m[32m      tsort (>= 0.2)[m
+       zeitwerk (~> 2.6)[m
+[31m-    rake (13.2.1)[m
+[31m-    rdoc (6.7.0)[m
+[32m+[m[32m    rake (13.3.1)[m
+[32m+[m[32m    rdoc (7.0.1)[m
+[32m+[m[32m      erb[m
+       psych (>= 4.0.0)[m
+[31m-    regexp_parser (2.9.2)[m
+[31m-    reline (0.5.9)[m
+[32m+[m[32m      tsort[m
+[32m+[m[32m    regexp_parser (2.11.3)[m
+[32m+[m[32m    reline (0.6.3)[m
+       io-console (~> 0.5)[m
+[31m-    rexml (3.3.4)[m
+[31m-      strscan[m
+[31m-    rspec (3.13.0)[m
+[32m+[m[32m    rexml (3.4.4)[m
+[32m+[m[32m    rspec (3.13.2)[m
+       rspec-core (~> 3.13.0)[m
+       rspec-expectations (~> 3.13.0)[m
+       rspec-mocks (~> 3.13.0)[m
+[31m-    rspec-core (3.13.0)[m
+[32m+[m[32m    rspec-core (3.13.6)[m
+       rspec-support (~> 3.13.0)[m
+[31m-    rspec-expectations (3.13.1)[m
+[32m+[m[32m    rspec-expectations (3.13.5)[m
+       diff-lcs (>= 1.2.0, < 2.0)[m
+       rspec-support (~> 3.13.0)[m
+[31m-    rspec-mocks (3.13.1)[m
+[32m+[m[32m    rspec-mocks (3.13.7)[m
+       diff-lcs (>= 1.2.0, < 2.0)[m
+       rspec-support (~> 3.13.0)[m
+[31m-    rspec-rails (6.1.3)[m
+[31m-      actionpack (>= 6.1)[m
+[31m-      activesupport (>= 6.1)[m
+[31m-      railties (>= 6.1)[m
+[32m+[m[32m    rspec-rails (7.1.1)[m
+[32m+[m[32m      actionpack (>= 7.0)[m
+[32m+[m[32m      activesupport (>= 7.0)[m
+[32m+[m[32m      railties (>= 7.0)[m
+       rspec-core (~> 3.13)[m
+       rspec-expectations (~> 3.13)[m
+       rspec-mocks (~> 3.13)[m
+       rspec-support (~> 3.13)[m
+[31m-    rspec-support (3.13.1)[m
+[31m-    shoulda-matchers (6.2.0)[m
+[31m-      activesupport (>= 5.2.0)[m
+[32m+[m[32m    rspec-support (3.13.6)[m
+[32m+[m[32m    securerandom (0.4.1)[m
+[32m+[m[32m    shoulda-matchers (7.0.1)[m
+[32m+[m[32m      activesupport (>= 7.1)[m
+     simplecov (0.22.0)[m
+       docile (~> 1.1)[m
+       simplecov-html (~> 0.11)[m
+       simplecov_json_formatter (~> 0.1)[m
+[31m-    simplecov-html (0.12.3)[m
+[32m+[m[32m    simplecov-html (0.13.2)[m
+     simplecov_json_formatter (0.1.4)[m
+[31m-    sprockets (4.2.1)[m
+[32m+[m[32m    sprockets (4.2.2)[m
+       concurrent-ruby (~> 1.0)[m
+[32m+[m[32m      logger[m
+       rack (>= 2.2.4, < 4)[m
+     sprockets-rails (3.5.2)[m
+       actionpack (>= 6.1)[m
+       activesupport (>= 6.1)[m
+       sprockets (>= 3.0.0)[m
+[31m-    stimulus-rails (1.3.3)[m
+[31m-      railties (>= 6.0.0)[m
+[31m-    stringio (3.1.1)[m
+[31m-    strscan (3.1.0)[m
+[31m-    thor (1.3.1)[m
+[31m-    timeout (0.4.1)[m
+[31m-    turbo-rails (2.0.6)[m
+[31m-      actionpack (>= 6.0.0)[m
+[31m-      activejob (>= 6.0.0)[m
+[32m+[m[32m    stimulus-rails (1.3.4)[m
+       railties (>= 6.0.0)[m
+[32m+[m[32m    stringio (3.2.0)[m
+[32m+[m[32m    thor (1.4.0)[m
+[32m+[m[32m    timeout (0.6.0)[m
+[32m+[m[32m    tsort (0.2.0)[m
+[32m+[m[32m    turbo-rails (2.0.20)[m
+[32m+[m[32m      actionpack (>= 7.1.0)[m
+[32m+[m[32m      railties (>= 7.1.0)[m
+     tzinfo (2.0.6)[m
+       concurrent-ruby (~> 1.0)[m
+[31m-    uri (0.13.0)[m
+[31m-    vcr (6.2.0)[m
+[32m+[m[32m    uri (1.1.1)[m
+[32m+[m[32m    vcr (6.3.1)[m
+[32m+[m[32m      base64[m
+     web-console (4.2.1)[m
+       actionview (>= 6.0.0)[m
+       activemodel (>= 6.0.0)[m
+       bindex (>= 0.4.0)[m
+       railties (>= 6.0.0)[m
+[31m-    webmock (3.23.1)[m
+[32m+[m[32m    webmock (3.26.1)[m
+       addressable (>= 2.8.0)[m
+       crack (>= 0.3.2)[m
+       hashdiff (>= 0.4.0, < 2.0.0)[m
+[31m-    webrick (1.8.1)[m
+[31m-    websocket-driver (0.7.6)[m
+[32m+[m[32m    websocket-driver (0.8.0)[m
+[32m+[m[32m      base64[m
+       websocket-extensions (>= 0.1.0)[m
+     websocket-extensions (0.1.5)[m
+     xpath (3.2.0)[m
+       nokogiri (~> 1.8)[m
+[31m-    zeitwerk (2.6.17)[m
+[32m+[m[32m    zeitwerk (2.7.4)[m
+ [m
+ PLATFORMS[m
+   aarch64-linux[m
+[36m@@ -335,6 +371,8 @@[m [mDEPENDENCIES[m
+   orderly[m
+   pg (~> 1.1)[m
+   pry[m
+[32m+[m[32m  pry-byebug (~> 3.11)[m
+[32m+[m[32m  pry-rails (~> 0.3.11)[m
+   puma (>= 5.0)[m
+   rails (~> 7.1.3, >= 7.1.3.4)[m
+   rspec-rails[m

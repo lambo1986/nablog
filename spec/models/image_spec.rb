@@ -13,7 +13,7 @@ RSpec.describe Image, type: :model do
       image1 = Image.new(image_data: 0100101001100110, image_name: 'image1.jpg')
 
       post1.images << image1
-      
+
       expect(image1.image_data).to be_an Integer
       expect(image1.image_name).to be_a String
     end

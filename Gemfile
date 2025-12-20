@@ -52,6 +52,8 @@ group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
   gem 'pry'
   gem 'rspec-rails'
+  gem 'pry-byebug'
+  gem 'pry-rails'
   gem 'capybara'
   gem 'launchy'
   gem 'simplecov'
@@ -73,7 +75,3 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
-
-gem "pry-rails", "~> 0.3.11", :groups => [:development, :test]
-
-gem "pry-byebug", "~> 3.11", :groups => [:development, :test]

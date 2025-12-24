@@ -26,7 +26,7 @@ window.calculateGig = function () {
     let verdict;
     if (score >= 75) {
         verdict = "🔥 TAKE THE GIG";
-    } else if (score >= 50) {
+    } else if (score >= 35) {
         verdict = "🤔 Maybe — depends on your mood";
     } else {
         verdict = "❌ Hard pass";

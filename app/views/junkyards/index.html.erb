@@ -1,2 +1,38 @@
 <h1>The Junkyard</h1>
 <h2>This is a place for all unorganized chaos, as well as organized chaos.</h2>
+
+<hr>
+
+<h3>Hey down here!</h3>
+<p>So this is a little calculator to help you find out whether or not you should take a gig.</p>
+
+<p>Enter the pay:</p>
+<input type="number" id="pay" placeholder="Pay">
+
+<p>Enter the hours worked:</p>
+<input type="number" id="hours" placeholder="Hours">
+
+<p>Do you like the music?</p>
+<input type="checkbox" id="musicYes">
+<label for="musicYes">Yes</label>
+
+<p>Do you like the people?</p>
+<input type="checkbox" id="peopleYes">
+<label for="peopleYes">Yes</label>
+
+<p>On a scale of 1 to 10, how shitty are the logistics?</p>
+<input type="number" id="logistics" placeholder="Logistics (1–10)">
+
+<p>How many hours approximately will you have to practice for the gig?</p>
+<input type="number" id="practice" placeholder="Practice (hours)">
+
+<p>How many minutes approximately will you have to travel for the gig?</p>
+<input type="number" id="travel" placeholder="Travel (minutes)">
+
+<br><br>
+
+<button type="button" onclick="calculateGig()">
+  Calculate Gig
+</button>
+
+<p id="result"></p>
